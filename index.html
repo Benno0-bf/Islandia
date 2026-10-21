@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islandia</title>
-  </head>
-  <body>
-    <h1>Islandia</h1>
-    <p>I'm going to work on this more later.</p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Islandia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 2rem 1rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004999;
+    }
+    #fact-box {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Islandia</h1>
+    <p>The Land of island</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Islandia</h2>
+      <p>Islandia government</p>
+      <ul>
+        <li><strong>President:</strong>k.s.</li>
+        <li><strong>Vice President:</strong>s.h.</li>
+        <li><strong>Head of Technology:</strong> b.f.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>fact</h2>
+      <button onclick="showFact()">fact</button>
+      <p id="fact-box"></p>
+    </div>
+  </main>
+
+  <script>
+    const facts = [
+      "Islandia",
+      "yes",
+      "idk"
+    ];
+
+    function showFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact-box").innerText = facts[randomIndex];
+    }
+  </script>
+
+</body>
 </html>
